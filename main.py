@@ -1,0 +1,8 @@
+import os
+
+PROMISED_DOWN = 150
+PROMISED_UP = 10
+CHROME_DRIVER_PATH = os.environ["CHROME_DRIVER_PATH"]
+EMAIL = os.environ["EMAIL"]
+PASSWORD = os.environ["PASSWORD"]
+
