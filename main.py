@@ -3,15 +3,14 @@ from internet_speed import InternetSpeedTwitterBot
 
 PROMISED_DOWN = 150
 PROMISED_UP = 10
-CHROME_DRIVER_PATH = os.environ["CHROME_DRIVER_PATH"]
 EMAIL = os.environ["EMAIL"]
 PASSWORD = os.environ["PASSWORD"]
+USERNAME = os.environ["USERNAME"]
 
-bot = InternetSpeedTwitterBot(CHROME_DRIVER_PATH)
+bot = InternetSpeedTwitterBot()
 bot.get_internet_speed()
-bot.tweet_at_provider()
+bot.tweet_at_provider(EMAIL, PASSWORD, USERNAME)
 
-download = bot.down
-upload = bot.up
-print(f'down: {download}')
-print(f'up: {upload}')
+print(f'download: {bot.down}')
+print(f'upload: {bot.up}')
+
